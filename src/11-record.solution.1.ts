@@ -1,5 +1,11 @@
 import { expect, it } from "vitest";
-
+/***
+ * Construct a type with a set of properties K of type T
+ * 開發者方便定義物件型別中屬性 key 和 value 的型別
+ * type Record<K extends keyof any, T> = {
+    [P in K]: T;
+ * };
+ */
 const createCache = () => {
   const cache: Record<string, string> = {};
 
